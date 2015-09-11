@@ -10,7 +10,7 @@ elec <- read.csv("../household_power_consumption.txt", na.strings="?",
 # Keeping the date as a string allows us to select the days of interest.
 subdf <- elec[grep("^[12]/2/2007", elec$Date),]
 
-# open a PNG device. By default png makes a 480x280 pixel image
+# open a PNG device. By default png makes a 480x480 pixel image
 #  so we don't need to specify height and width explicitly.
 png(filename="plot1.png")
 
