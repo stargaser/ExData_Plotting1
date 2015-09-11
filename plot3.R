@@ -22,7 +22,7 @@ subdf <- transform(subdf, Weekday = factor(wday(subdf$DateTime, label=TRUE)))
 png(filename="plot3.png")
 
 plot(subdf$DateTime, subdf$Sub_metering_1, type="l",
-     xlab="Global Active Power (kilowatts)", ylab="Energy sub metering")
+     xlab=NA, ylab="Energy sub metering")
 lines(subdf$DateTime, subdf$Sub_metering_2, col="red")
 lines(subdf$DateTime, subdf$Sub_metering_3, col="blue")
 legend("topright", lty="solid", col = c("black", "red", "blue"),
